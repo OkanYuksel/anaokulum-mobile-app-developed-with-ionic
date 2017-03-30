@@ -1,0 +1,65 @@
+﻿
+<html ng-app="AnaokulumBeta">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Popups
+    </title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+
+</head>
+<body class="padding" ng-controller="OgretmenKayitliOgrencileriGoruntuleCtrl">
+  
+        <ion-view view-title="Karne">
+            <div style="vertical-align:top">
+                <ion-tabs>
+
+                    <ion-tab title="Ogrenci Bilgileri">
+                        <!-- Tab 1 content -->
+
+                            <div style="margin-top:100px">
+                                <center>
+                                    <img src="img/profil.jpg" />
+                                </center>
+                                <center>Okan YÜKSEL</center>
+                                <center>Yaş: 21</center>
+                                <center>Kan Grubu: 0 Rh(+)</center>
+                                <center>Sürekli Hastaligi: Yok</center>
+                                <center>Sürekli Almasi Gereken Ilac: Yok</center>
+                                <center>Sinifi: A1</center>
+                                <center>Sorumlu Ogretmeni: Nazlı BIDIBIDI</center>
+                            </div>
+                        
+
+                    </ion-tab>
+
+                    <ion-tab title="Ogrenci Karne">
+                        <!-- Tab 2 content -->
+                        <div style="margin-top:100px">
+                            <ion-list>
+                                <!--<on-item href="#/app/Karne.html">Karne</on-item>-->
+                                <ion-item ng-click="studentpagegec()" ng-repeat="lesson in lessons">
+                                    {{lesson.Lesson_Name}} {{}}
+                                </ion-item>
+                            </ion-list></div>
+</ion-tab>
+
+                    <ion-tab title="Başka Bir Tab..">
+                        <!-- Tab 3 content -->
+                        <h1 style="margin-top:100px;">Ders Ayrıntıları</h1>
+                    </ion-tab>
+
+                </ion-tabs></div>
+    
+</ion-view>
+
+
+
+
+   
+</body>
+</html>

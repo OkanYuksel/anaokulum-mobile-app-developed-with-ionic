@@ -1,0 +1,45 @@
+<ion-view>
+    <ion-nav-buttons class="bar bar-header">
+        <!--<button class="button button-icon button-clear ion-navicon soundclick" ng-click="openMenu()"></button>-->
+        <a class="button button-icon button-clear ion-navicon soundclick" href="#/menu"></a>
+        <div class="h1 title header-title">Uye Girisi</div>
+       
+    </ion-nav-buttons>
+    <div ng-controller="LoginCtrlCtrl">
+        <ion-content>
+            <!-- Add jQuery from -->
+        
+
+            <form name="loginForm" ng-submit="doLogin()">
+                
+
+                <div class="list card"  style="margin-top:20%;" >
+                    <label class="item item-input back-color-white" ng-class="{ 'has-errors' : loginForm.username.$invalid, 'no-errors' : loginForm.username.$valid}">
+                        <span class="input-label">Kullanici Adi:</span>
+                        <input name="username" type="text" id="username" class="back-color-white" ng-model="$parent.username" required>
+                    </label>
+                    <label class="item item-input back-color-white" ng-class="{ 'has-errors' : loginForm.password.$invalid, 'no-errors' : loginForm.password.$valid}">
+                        <span class="input-label">Sifre :</span>
+                        <input name="password" type="password" id="password" class="back-color-white" ng-model="$parent.password" ng-minlength="1" required>
+                    </label>
+                    <div class="item" style="margin-bottom:10px;">
+                        <button type="submit" class="button button-full button-positive" ng-disabled="loginForm.$invalid">
+                            Giris Yap
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="list card">
+                <div class="item item-text-wrap" style="border-bottom-width:2px;border-bottom-color:gray;border-bottom-style:solid">
+                    <b>UYE DEGIL MISINIZ?</b>
+                </div>
+                <div class="item item-text-wrap">
+                    Uyelerimize ozel hizmetlerimizden faydalanabilmek icin anaokulunuzla iletisime gecerek uye hesabinizi actirabilirsiniz.
+                </div>
+                <div class="item" style="padding-top:10px">
+                    <a class="button button-full button-positive" href="#/register">Anaokulu Iletisim Bilgileri</a>
+                </div>
+            </div>
+        </ion-content>
+    </div>
+</ion-view>

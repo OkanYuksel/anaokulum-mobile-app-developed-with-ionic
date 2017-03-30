@@ -1,0 +1,10 @@
+﻿    <ion-view view-title="Ogretmen Diger Ogretmenler Ile Iletisim">
+<ion-content>
+    <ion-list>
+        <!--<on-item href="#/app/Karne.html">Karne</on-item>-->
+        <ion-item ng-click="ogretmendigerogretmenlerleiletisimgec()" ng-repeat="teacher in teachers">
+            <img style="float:left;" width="35" height="35" src="img/teacher.png" /><span style="margin-left:5%;"></span>{{teacher.Name}} {{teacher.Surname}}
+        </ion-item>
+    </ion-list>
+</ion-content>
+    </ion-view>

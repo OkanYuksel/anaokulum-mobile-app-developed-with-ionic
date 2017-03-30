@@ -1,0 +1,10 @@
+﻿    <ion-view view-title="Ogretmen Kayitli Ogrencileri Goruntule">
+<ion-content>
+    <ion-list>
+        <!--<on-item href="#/app/Karne.html">Karne</on-item>-->
+        <ion-item ng-click="studentpagegec()" ng-repeat="student in students">
+            <img style="float:left;" width="35" height="35" src="img/student.png" /><span style="margin-left:5%;"></span>{{student.Name}} {{student.Surname}}
+        </ion-item>
+        </ion-list>
+</ion-content>
+    </ion-view>

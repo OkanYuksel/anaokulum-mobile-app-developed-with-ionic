@@ -1,0 +1,41 @@
+﻿<ion-view title="Ogretmen Veli Iletisime Gec"> <ion-content>
+   <style src></style>
+    
+               <ul style="margin-top:100px;
+
+ ">
+                   <li ng-repeat="message  in messages">
+                   
+                       <div class="message sent">
+                          {{message.Message}}
+                 
+                       </div>
+           
+                       
+                       <!--<div class="message received">
+                           You were drunk.
+                           <span class="metadata"><span class="time"></span></span>
+                       </div>-->
+                   </li>
+                   
+               </ul>
+                                                   <form name="loginForm" ng-submit="doLogin()">
+
+
+                                                 
+                                                   </form>                    
+                                                
+                             
+</ion-content>
+    <ion-footer-bar>
+        <form class="conversation-compose" ng-submit="sendMessage()">
+            <input class="input-msg" name="input" placeholder="Mesaj yaz.." autocomplete="off" autofocus ng-model="$parent.chat_message" /><button class="send" type="submit" >
+                <div class="circle">
+                    <i class="zmdi zmdi-mail-send"></i>
+                    <img style="float:left;" width="35" height="35" src="img/done.png" />
+                </div>
+            </button>
+        </form>
+    </ion-footer-bar>
+</ion-view>
+
